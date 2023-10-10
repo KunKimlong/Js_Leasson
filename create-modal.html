@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .box{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .show-box{
+            display: block;
+        }
+        .box-none{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            position: relative;
+        }
+        .min-box{
+            width: 40%;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px 30px;
+        }
+        .min-box .icon{
+            float: right;
+            /* padding: 15px; */
+            cursor: pointer;
+            /* background-color: aqua; */
+        }
+        .min-box .min-box-content{
+            margin-top: 40px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            color: white;
+            list-style-type: none;
+        }
+        li{
+            margin: 0 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .s{
+            background-color: rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-dark p-5">
+        <h1 class="text-center text-white">Add Data</h1>
+        <button class="btn btn-success" id="btn-show">+ Add Data</button>
+        <div class="box">
+            <div class="box-none"></div>
+            <div class="min-box">
+                <div class="icon">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="min-box-content">
+                    <form action="">
+                        <label for="">ID:</label>
+                        <input type="text" name="" id="id" placeholder="ID:" class="form-control my-2">
+                        <label for="">Name:</label>
+                        <input type="text" name="" id="name" placeholder="Name:" class="form-control my-2">
+                        <label for="">Gender</label>
+                        <select name="" id="gender" class="form-select my-2">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <label for="">Course:</label>
+                        <select name="" id="course" class="form-select my-2">
+                            <option value="Web Design">Web Design</option>
+                            <option value="React Js">React Js</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Laravel">Laravel</option>
+                        </select>
+                        <label for="">Attendent</label> 
+                        <input type="text" name="" id="attendent" class="form-control my-2" placeholder="Attendent">
+                        <label for="">Activities</label>
+                        <input type="text" name="" id="activities" class="form-control my-2" placeholder="Activites">
+                        <label for="">Exam</label>
+                        <input type="text" name="" id="exam" class="form-control my-2" placeholder="Exam">
+                        <button type="button" id="btn-submit" class="btn btn-outline-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./create-modal.js"></script>
+</html>
